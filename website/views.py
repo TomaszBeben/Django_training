@@ -10,3 +10,6 @@ def welcome(req):
 
 def date(req):
     return HttpResponse('Page was served at: ' + str(datetime.now()))
+
+def about(req):
+    return HttpResponse('YO! this is only django traning, keep going...')
