@@ -5,8 +5,11 @@ from django.http import HttpResponse
 
 from datetime import datetime
 
+from meetings.models import Meetings
+
 def welcome(req):
-    return HttpResponse('Welcome to the Meeting Planner!')
+    return render(req, 'website/welcome.html',
+                  {'num_meetings': Meetings.objects.count()})
 
 def date(req):
     return HttpResponse('Page was served at: ' + str(datetime.now()))
