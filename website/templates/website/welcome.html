@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Welcome!</title>
-</head>
+{% block title %}Welcome{% endblock %}
 
-<body>
-    <h1>welcome to the Meeting Planner</h1>
+{% block content %}
+
+    <h1 class="app_header">welcome to the Meeting Planner</h1>
     <p>some text to render</p>
     <p> Number of meetings is: {{num_meetings}} </p>
     <p> Number of Rooms is: {{num_rooms}} </p>
@@ -19,11 +16,10 @@
                 {{ meeting.title }}
             </a>
         </li>
-        {% endfor %}
+    {% endfor %}
     </ul>
     <a href=" {% url 'rooms' %} ">
         Room list
     </a>
-</body>
 
-</html>
+{% endblock %}

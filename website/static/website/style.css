@@ -1,0 +1,18 @@
+body {
+    font-family: sans-serif;
+    color: cornflowerblue;
+    background-color: floralwhite;
+}
+
+ul {
+    list-style-type: none
+}
+
+a {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.app_header {
+    font-size: 32px;
+}

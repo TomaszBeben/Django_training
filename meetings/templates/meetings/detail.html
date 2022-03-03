@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Meeting: {{meetings.title}}</title>
-</head>
+{% block title %}Meeting: {% endblock %}
 
-<body>
-    <h1>
+{% block content %}
+
+    <h1 class="app_header">
         {{meetings.title}}
     </h1>
     <p>
@@ -21,6 +18,5 @@
                 Home
             </a>
     </strong>
-</body>
 
-</html>
+{% endblock %}
