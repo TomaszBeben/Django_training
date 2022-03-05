@@ -1,25 +1,24 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block title %}Welcome{% endblock %} {% block content %}
 
-{% block title %}Welcome{% endblock %}
-
-{% block content %}
-
-    <h1 class="app_header">welcome to the Meeting Planner</h1>
-    <p>some text to render</p>
-    <p> Number of meetings is: {{num_meetings}} </p>
-    <p> Number of Rooms is: {{num_rooms}} </p>
-    <h2>Meetings: </h2>
-    <ul>
-        {% for meeting in meetings_all %}
-        <li>
-            <a href=" {% url 'detail' meeting.id %} ">
+<h1 class="app_header">welcome to the Meeting Planner</h1>
+<p>some text to render</p>
+<p> Number of meetings is: {{num_meetings}} </p>
+<p> Number of Rooms is: {{num_rooms}} </p>
+<h2>Meetings: </h2>
+<ul>
+    {% for meeting in meetings_all %}
+    <li>
+        <a href=" {% url 'detail' meeting.id %} ">
                 {{ meeting.title }}
             </a>
-        </li>
+    </li>
     {% endfor %}
-    </ul>
+</ul>
+<h2>
     <a href=" {% url 'rooms' %} ">
         Room list
     </a>
+</h2>
+
 
 {% endblock %}
