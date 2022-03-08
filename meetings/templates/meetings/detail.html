@@ -3,7 +3,11 @@
 {% block title %}Meeting: {% endblock %}
 
 {% block content %}
-
+    <strong>
+        <a href="{% url 'welcome' %}">
+            Home
+        </a>
+    </strong>
     <h1 class="app_header">
         {{meetings.title}}
     </h1>
@@ -13,10 +17,5 @@
             {{meeting.room}}
         </strong>
     </p>
-    <strong>
-            <a href="{% url 'welcome' %}">
-                Home
-            </a>
-    </strong>
 
 {% endblock %}

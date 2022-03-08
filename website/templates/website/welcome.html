@@ -5,7 +5,13 @@
 {% block content %}
 
 <h1 class="app_header">welcome to the Meeting Planner</h1>
-<p>some text to render</p>
+<p>
+    <strong>
+        <a href=" {% url 'new' %} ">
+            Create new meeting
+        </a>
+    </strong>
+</p>
 <p> Number of meetings is: {{num_meetings}} </p>
 <p> Number of Rooms is: {{num_rooms}} </p>
 <h2>Meetings: </h2>

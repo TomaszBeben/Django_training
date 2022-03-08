@@ -12,6 +12,7 @@ def welcome(req):
                     {
                         'num_meetings': Meetings.objects.count(),
                         'meetings_all': Meetings.objects.all(),
+                        'num_rooms': Room.objects.count()
                     }
                     )
 
